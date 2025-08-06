@@ -20,11 +20,16 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
+
+    @Enumerated(EnumType.STRING)
     private Role role;
     private boolean ativo;
 
-    @OneToMany(mappedBy = "usuario")
-    private List<Tarefa> tarefas;
+    @OneToMany(mappedBy = "gestor")
+    private List<Tarefa> tarefasGestor;
+
+    @OneToMany(mappedBy = "colaborador")
+    public List<Tarefa> tarefasColaborador;
 
 
     public Usuario(String nome, String email, String senha) {

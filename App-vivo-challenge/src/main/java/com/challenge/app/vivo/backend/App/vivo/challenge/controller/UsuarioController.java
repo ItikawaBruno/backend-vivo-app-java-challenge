@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/usuario")
 public class UsuarioController {
